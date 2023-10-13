@@ -9,7 +9,15 @@ public class Exercise : BaseExercise
 
     public override void Execute()
     {
-        Console.WriteLine("Not Implemented Yet");
+        ICat tiquinho = new CatProxy("Tiquinho");
+
+        tiquinho.ShowData();
+        tiquinho.ShowData();
+
+        ICat tuka = new CatProxy("Tuka");
+
+        tuka.ShowData();
+        tuka.ShowData();
     }
 
 }
