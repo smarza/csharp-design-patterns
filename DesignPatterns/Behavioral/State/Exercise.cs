@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns.Behavioral.State;
+﻿using System.Xml;
+
+namespace DesignPatterns.Behavioral.State;
 
 public class Exercise : BaseExercise
 {
@@ -9,7 +11,15 @@ public class Exercise : BaseExercise
 
     public override void Execute()
     {
-        Console.WriteLine("Not Implemented Yet");
+        var display = new ArtDisplay(new HappyArtState());
+
+        display.ShowArt();
+
+        display.SetState(new SadArtState());
+        display.ShowArt();
+
+        display.SetState(new ThoughtfulArtState());
+        display.ShowArt();
     }
 
 }
