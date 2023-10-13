@@ -9,7 +9,15 @@ public class Exercise : BaseExercise
 
     public override void Execute()
     {
-        Console.WriteLine("Not Implemented Yet");
+        var delorean = new DeLorean();
+        var device1 = new MonitoringDevice("Device1");
+        var device2 = new MonitoringDevice("Device2");
+
+        delorean.RegisterObserver(device1);
+        delorean.RegisterObserver(device2);
+
+        delorean.TimeTravel("2015");
+        delorean.TimeTravel("1955");
     }
 
 }
