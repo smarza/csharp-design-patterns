@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Behavioral.Proxy;
+﻿namespace DesignPatterns.Behavioral.Proxy.Cache;
 
 public class RealCat : ICat
 {

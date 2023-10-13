@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Creational.Singleton;
+﻿namespace DesignPatterns.Creational.Singleton.ThreadSafe;
 
 class Singleton
 {

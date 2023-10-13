@@ -12,9 +12,12 @@ public abstract class BaseExercise
         {
             string patternType = parts[1];
             string patternName = parts[2];
+            string exerciseName = parts.Length > 3 ? parts[3] : string.Empty;
 
-            Console.WriteLine($"\n\n------------------------------------------------------------------");
-            Console.WriteLine($"{patternType.ToUpper()}: {patternName}\n");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\n------------------------------------------------------------------");
+            Console.WriteLine($"{patternType.ToUpper()}: {patternName} {exerciseName}\n");
+            Console.ResetColor();
         }
         else
         {

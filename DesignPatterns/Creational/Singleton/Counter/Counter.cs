@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Creational.Singleton;
+﻿namespace DesignPatterns.Creational.Singleton.Counter;
 
 public interface ICounter
 {
@@ -24,6 +24,7 @@ public sealed class Counter : ICounter
 
     public void Add()
     {
+        Console.WriteLine("Adding 1 to Counter.");
         _count++;
     }
 

@@ -17,6 +17,9 @@ public class Exercise : BaseExercise
         delorean.RegisterObserver(device2);
 
         delorean.TimeTravel("2015");
+
+        Console.WriteLine();
+
         delorean.TimeTravel("1955");
     }
 

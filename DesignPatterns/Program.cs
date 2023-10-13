@@ -6,14 +6,15 @@ Console.Clear();
 var exerciseFactory = new ExerciseFactory();
 
 var exercises = new List<string>() {
-    "Creational.Singleton",
+    "Creational.Singleton.Counter",
+    "Creational.Singleton.ThreadSafe",
     "Creational.Factory",
     "Structural.Adapter",
     "Structural.ChainOfResponsibility",
     "Structural.Facade",
     "Behavioral.Mediator",
     "Behavioral.Observer",
-    "Behavioral.Proxy",
+    "Behavioral.Proxy.Cache",
     "Behavioral.State",
     "Behavioral.Strategy"
     };

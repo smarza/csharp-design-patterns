@@ -9,7 +9,14 @@ public class Exercise : BaseExercise
 
     public override void Execute()
     {
-        Console.WriteLine("Not Implemented Yet");
+        var player = new MusicPlayer(new MediumAudioQuality());
+        player.PlayMusic();
+
+        player.SetQuality(new HighAudioQuality());
+        player.PlayMusic();
+
+        player.SetQuality(new LowAudioQuality());
+        player.PlayMusic();
     }
 
 }
