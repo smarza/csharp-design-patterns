@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Structural.ChainOfResponsibility;
+﻿namespace DesignPatterns.Structural.ChainOfResponsibility.PaymentVerification;
 
 public class BalanceHandler : IHandler
 {
