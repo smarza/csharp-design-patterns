@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public class CheckRemoveEmptyTaskFlagHandler : ConversionTaskHandler
+public class CheckRemoveEmptyTaskFlagHandler : WorkflowHandler
 {
 
     public override void Handle(ConversionTask task)

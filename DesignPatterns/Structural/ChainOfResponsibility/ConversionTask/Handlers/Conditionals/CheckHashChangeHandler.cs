@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public class CheckHashChangeHandler : ConversionTaskHandler
+public class CheckHashChangeHandler : WorkflowHandler
 {
 
     public override void Handle(ConversionTask task)

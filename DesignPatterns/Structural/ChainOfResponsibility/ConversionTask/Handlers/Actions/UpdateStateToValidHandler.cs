@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public class UpdateStateToValidHandler : ConversionTaskHandler
+public class UpdateStateToValidHandler : WorkflowHandler
 {
 
     public override void Handle(ConversionTask task)

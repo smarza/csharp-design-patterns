@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public class UpdateStateToQueuedHandler : ConversionTaskHandler
+public class UpdateStateToQueuedHandler : WorkflowHandler
 {
 
     public override void Handle(ConversionTask task)

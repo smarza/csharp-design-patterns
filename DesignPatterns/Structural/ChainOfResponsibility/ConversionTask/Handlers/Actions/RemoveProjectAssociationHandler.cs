@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public class RemoveProjectAssociationHandler : ConversionTaskHandler
+public class RemoveProjectAssociationHandler : WorkflowHandler
 {
 
     public override void Handle(ConversionTask task)

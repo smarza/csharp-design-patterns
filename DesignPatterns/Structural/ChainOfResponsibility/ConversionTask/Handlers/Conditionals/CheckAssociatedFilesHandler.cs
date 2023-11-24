@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public class CheckAssociatedFilesHandler : ConversionTaskHandler
+public class CheckAssociatedFilesHandler : WorkflowHandler
 {
 
     public override void Handle(ConversionTask task)

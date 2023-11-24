@@ -1,17 +1,17 @@
 ﻿namespace DesignPatterns.Structural.ChainOfResponsibility.ConversionTask;
 
-public abstract class ConversionTaskHandler
+public abstract class WorkflowHandler
 {
-    protected ConversionTaskHandler _nextHandlerOnTrue;
-    protected ConversionTaskHandler _nextHandlerOnFalse;
+    protected WorkflowHandler _nextHandlerOnTrue;
+    protected WorkflowHandler _nextHandlerOnFalse;
 
-    public ConversionTaskHandler SetNextOnTrue(ConversionTaskHandler handler)
+    public WorkflowHandler SetNextOnTrue(WorkflowHandler handler)
     {
         _nextHandlerOnTrue = handler;
         return this; // Permitindo encadeamento
     }
 
-    public ConversionTaskHandler SetNextOnFalse(ConversionTaskHandler handler)
+    public WorkflowHandler SetNextOnFalse(WorkflowHandler handler)
     {
         _nextHandlerOnFalse = handler;
         return this; // Permitindo encadeamento

@@ -2,7 +2,7 @@
 
 public class Exercise : BaseExercise
 {
-    ConversionTaskHandler begin;
+    WorkflowHandler workflow;
 
     public Exercise() : base()
     {
@@ -17,19 +17,22 @@ public class Exercise : BaseExercise
             Console.WriteLine($"Verificando Tarefa: {conversionTask.Name}: \n");
 
             // Inicia o processamento
-            begin.Handle(conversionTask);
+            workflow.Handle(conversionTask);
         }
     }
 
     private void CreateWorkFlow()
     {
         // Instancia todos os handlers
-        begin = new BeginHandler();
+        var begin = new BeginHandler();
+
+        // Define o inicio do fluxo
+        workflow = begin;
 
         // Encerramento
         var finish = new FinishHandler();
 
-        // Fluxo de Jobs
+        // Fluxo externo de Jobs
         var conversionJobsWorkflow = new ConversionJobsWorkflowHandler();
 
         // Instancias dos Condicionais
@@ -50,6 +53,7 @@ public class Exercise : BaseExercise
         var updateHash = new UpdateHashHandler();
         var updateStateToQueued = new UpdateStateToQueuedHandler();
         var updateStateToValid = new UpdateStateToValidHandler();
+
 
         // ---------------------
         // Configura o fluxo
@@ -123,6 +127,7 @@ public class Exercise : BaseExercise
 
         // Fluxo externo (mock)
         conversionJobsWorkflow.SetNextOnTrue(updateStateToValid);
+
     }
 
     private List<ConversionTask> SeedConversionTasks()
